@@ -1,6 +1,6 @@
-# anticorruptionapp
+# Anti Corruption Nepal App
 
-A new Flutter project.
+A Flutter project.
 
 ## Getting Started
 
