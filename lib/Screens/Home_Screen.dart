@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       drawer: NavDrawer(),
       appBar: AppBar(
-        title: Text('Menu'),
+        title: Text('Anti Corruption Nepal'),
         backgroundColor: Colors.green,
       ),
       body: SingleChildScrollView(
