@@ -10,7 +10,9 @@ class DataStoreForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: DataForm());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: DataForm());
   }
 }
 

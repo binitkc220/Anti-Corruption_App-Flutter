@@ -9,7 +9,7 @@ class LoadingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Loading Screen',
-      
+      debugShowCheckedModeBanner: false,
       home: SplashScreenView(
       navigateRoute: HomePage(),
       duration: 5000,
