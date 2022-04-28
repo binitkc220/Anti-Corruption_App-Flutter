@@ -60,6 +60,15 @@ class DataFormState extends State<DataForm> {
 
   Future _uploadFiles() async {
     try {
+      if (_valueghusdineNameController.text.isEmpty)
+      {
+        setState(() {
+        fileresponsemssg = " घुस लिने कर्मचारीको नाम र पद लेखिदिनुहोला";
+        filestatus_ = true;
+      });
+        print("Field is empty!");
+      }
+      else{
       FilePickerResult? result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['jpg', 'pdf', 'doc', 'mp3', 'm4a', 'mp4', 'avi', 'wav', 'heic'],
@@ -89,9 +98,9 @@ class DataFormState extends State<DataForm> {
         fileresponsemssg = response3.data["message"];
         filestatus_ = true;
       });
-      print(fileresponsemssg);
+      print(fileresponsemssg);}
     } catch (e) {
-      print("Excepion caught : $e");
+      print("Exception caught : $e");
     }
   }
 

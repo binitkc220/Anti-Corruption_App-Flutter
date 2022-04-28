@@ -1,4 +1,5 @@
 import 'package:anticorruptionapp/Screens/Form_Screen.dart';
+import 'package:anticorruptionapp/Screens/NagarpalikaOda_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Column(children: [
-          option1(),
+          option1(context),
           option2(),
           option3(),
           option4(),
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-Widget option1() {
+Widget option1(context) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
     child: SizedBox(
@@ -47,11 +48,18 @@ Widget option1() {
           shadowColor: Colors.grey,
           elevation: 20,
         ),
-        onPressed: () {},
-        child: const Text("नगरपलिका सम्बन्धि कामहरुको विवरण",
+        onPressed: () {
+          Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const NagarpalikaOdaBibaran()),
+  );
+        },
+        child: const Text("नगरपलिका / वडा सम्बन्धि कामहरुको विवरण",
             style: TextStyle(
               fontSize: 20,
-            )),
+            ),
+            textAlign: TextAlign.center,
+            ),
       ),
     ),
   );
