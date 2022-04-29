@@ -1,4 +1,5 @@
 import 'package:anticorruptionapp/Screens/Form_Screen.dart';
+import 'package:anticorruptionapp/Screens/JiPraKa_Screen.dart';
 import 'package:anticorruptionapp/Screens/NagarpalikaOda_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(children: [
           option1(context),
-          option2(),
+          option2(context),
           option3(),
           option4(),
           form(context),
@@ -65,7 +66,7 @@ Widget option1(context) {
   );
 }
 
-Widget option2() {
+Widget option2(context) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
     child: SizedBox(
@@ -78,7 +79,12 @@ Widget option2() {
           shadowColor: Colors.grey,
           elevation: 20,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const JiPraKaBibaran()),
+  );
+        },
         child: const Text(
           "जिल्ला प्रशासन कार्यालय सम्बन्धि कामहरुको विवरण",
           style: TextStyle(

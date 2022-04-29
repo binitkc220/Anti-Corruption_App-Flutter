@@ -73,7 +73,6 @@ class DataFormState extends State<DataForm> {
         type: FileType.custom,
         allowedExtensions: ['jpg', 'pdf', 'doc', 'mp3', 'm4a', 'mp4', 'avi', 'wav', 'heic'],
       );
-      ;
       PlatformFile file = result!.files.first;
       setState(() {});
       String? filepath = result.files.first.path;
