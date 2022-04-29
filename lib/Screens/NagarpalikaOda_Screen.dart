@@ -13,17 +13,31 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _headerStyle = const TextStyle(
+    const _headerStyle = TextStyle(
         color: Color.fromARGB(255, 38, 38, 38),
         fontSize: 18,
         fontWeight: FontWeight.bold);
+    const _contentStyle = TextStyle(
+      color: Color.fromARGB(255, 38, 38, 38),
+      fontSize: 15,
+      fontWeight: FontWeight.normal,
+    );
+    const _contentHeadingStyle = TextStyle(
+      color: Color.fromARGB(255, 38, 38, 38),
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+    );
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Nagarpalika Oda Bibaran',
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 197, 195, 195),
         appBar: AppBar(
           title: const Text('नगरपलिका / वडा सम्बन्धि कामहरुको विवरण'),
+          backgroundColor: Colors.green,
         ),
         body: Accordion(
           maxOpenSections: 2,
@@ -48,19 +62,11 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '१) विधार्थिको परिचय खुल्ने कागजात\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -72,11 +78,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'वडा अध्यक्ष\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -88,11 +90,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमुख\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -104,11 +102,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'सोही दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
@@ -133,27 +127,15 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '१) नागरिकता प्रमाणपत्रको प्रतिलिपि\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '२) घरधनीको शिफारिस\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -165,11 +147,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'वडा अध्यक्ष\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -181,11 +159,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमुख\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -197,11 +171,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'सोही दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -213,11 +183,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'स्वदेशी २,००० विदेशी ५,०००\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
@@ -239,27 +205,15 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '१) नागरिकता प्रमाणपत्रको प्रतिलिपि\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '२) जग्गा धनी प्रमाण पुर्जाको प्रतिलिपि\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -271,11 +225,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'वडा अध्यक्ष\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -287,11 +237,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमुख\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -303,11 +249,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'सोही दिन / सर्जमिनको हकमा ३ दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -319,11 +261,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: '१०,०००\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
@@ -345,19 +283,11 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '१) नागरिकता प्रमाणपत्रको प्रतिलिपि\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -369,11 +299,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'वडा अध्यक्ष\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -385,11 +311,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमुख\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -401,11 +323,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'सोही दिन / सर्जमिनको हकमा ३ दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -417,11 +335,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'निःशुल्क\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
@@ -443,19 +357,11 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '१) विधार्थिको परिचय खुल्ने कागजात\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -467,11 +373,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'वडा अध्यक्ष\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -483,11 +385,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमुख\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -499,11 +397,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: '१००\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
@@ -623,55 +517,31 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text:
                               '१) अंगिकृत नागरिकता प्राप्त गर्न खोजेको स्पष्ट आधार र जिल्ला प्रशासन कार्यालयबाट जारी भएको तोकिएको ढाचाको निवेदन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text:
                               '२) नागरिकता परित्याग गर्न खोजेको पुष्टि गर्ने कागजातहरु\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text:
                               '३) नेपालमा १५ वर्षदेखी कुनै व्यवसाय वा काम गरी वसेको प्रमाणपत्रको प्रतिलिपि\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text:
                               '४) नेपाली भाषा लेख्न र वोल्न जान्ने प्रमाण कागजातहरु\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '५) पासपोर्ट साईजको फोटो ३ प्रति\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -683,11 +553,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'वडा अध्यक्ष\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -699,11 +565,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमुख\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -715,11 +577,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'सोहि दिन / सर्जमिनको हकमा ३ दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -731,11 +589,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: '१०,०००\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
@@ -757,20 +611,12 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '''१) नागरिकता प्रमाणपत्रको प्रतिलिपि
 २) बसाई सरी आएकाको हकमा बसाइ सराइ प्रमाण पत्रको प्रतिलिपि\n''',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -782,11 +628,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'वडा अध्यक्ष\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -798,11 +640,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमुख\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         // TextSpan(
                         //   text: '\nसेवा समय \n',
@@ -830,11 +668,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: '५००\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
@@ -856,21 +690,13 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '''१) नागरिकता प्रमाणपत्रको प्रतिलिपि
 २) जग्गा धनी प्रमाण पुर्जाको प्रतिलिपि
 ३) भवन निर्माण ईजाजत प्रमाण पत्रको प्रतिलिपि\n''',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -882,11 +708,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'वडा अध्यक्ष\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -898,11 +720,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमुख\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -914,11 +732,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'सोहि दिन / सर्जमिनको हकमा ३ दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -930,11 +744,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: '१,०००\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),

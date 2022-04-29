@@ -8,10 +8,10 @@ class LoadingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Loading Screen',
+      title: 'Anti Corruption Nepal',
       debugShowCheckedModeBanner: false,
       home: SplashScreenView(
-      navigateRoute: HomePage(),
+      navigateRoute: MyApp(),
       duration: 5000,
       imageSize: 150,
       imageSrc: "assets/images/map_of_nepal.png",

@@ -13,17 +13,29 @@ class JiPraKaBibaran extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _headerStyle = const TextStyle(
+    const _headerStyle = TextStyle(
         color: Color.fromARGB(255, 38, 38, 38),
         fontSize: 18,
         fontWeight: FontWeight.bold);
+    const _contentStyle = TextStyle(
+      color: Color.fromARGB(255, 38, 38, 38),
+      fontSize: 15,
+      fontWeight: FontWeight.normal,
+    );
+    const _contentHeadingStyle = TextStyle(
+      color: Color.fromARGB(255, 38, 38, 38),
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+    );
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Jilla Prasasan Karyalaya Bibaran',
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 197, 195, 195),
         appBar: AppBar(
           title: const Text('जिल्ला प्रशासन कार्यालय सम्बन्धि कामहरुको विवरण'),
+          backgroundColor: Colors.green,
         ),
         body: Accordion(
           maxOpenSections: 2,
@@ -40,19 +52,15 @@ class JiPraKaBibaran extends StatelessWidget {
               headerBackgroundColorOpened: Color.fromARGB(255, 221, 221, 221),
               rightIcon: Icon(Icons.keyboard_arrow_down,
                   color: Colors.black, size: 20),
-              header: Text('वंशजको आधारमा नेपाली नागरिकता',
-                  style: _headerStyle),
+              header:
+                  Text('वंशजको आधारमा नेपाली नागरिकता', style: _headerStyle),
               content: Container(
                 padding: const EdgeInsets.all(5),
                 alignment: Alignment.topLeft,
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '\nनिवेदक सम्बन्धित जिल्लाकै भएको हकमा: ',
@@ -63,17 +71,14 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '''\n१. अनुसूची-१ को फाराममा वडा अध्यक्षको सिफारिश
+                          text:
+                              '''\n१. अनुसूची-१ को फाराममा वडा अध्यक्षको सिफारिश
 २. बाबुको र आमाको नागरिकता र विवाहिता महिला भए पतिको नागरिकताको फोटोकपी । सो नभए दाजु वा वंशज खुल्ने तीन पुस्ता भित्रको नातेदारको नागरिकताको फोटोकपी र नाता प्रमाणित प्रमाण पत्र
 ३. बाबु, आमा वा नागरिकता भिड्ने व्यक्तिबाट सनाखत, सो नभए दाजु वा भाई वा तीनपुस्ता भित्रको नजिकको अभिभावकसँगको नाता प्रमाणित सहित सनाखत
 ४. उक्त प्रमाणहरु पेश हुन नसकेमा वंशज खुल्ने अन्य प्रमाणहरु
 ५. फोटो ३ प्रति (कर्मचारी परिवार भए ४ प्रति)
 ६. जन्मदर्ता, जन्ममिति खुल्ने शैक्षिक प्रमाण पत्र वा नाबालक परिचय पत्र ।\n''',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 38, 38, 38),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nअन्य जिल्लाबाट बसाइसराई गरी आउनेको हकमाः \n',
@@ -84,16 +89,13 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text:'''१. स्थानीय पञ्जिकाधिकारीको कार्यालयबाट जारी भएको बसाइसराईको प्रमाणपत्र
+                          text:
+                              '''१. स्थानीय पञ्जिकाधिकारीको कार्यालयबाट जारी भएको बसाइसराईको प्रमाणपत्र
 २. जग्गाधनी प्रमाण पूर्जा 
 ३. घरको नक्सा पास प्रमाणपत्र 
 ४. पानी, विजुली, टेलिफोन महसुल कार्ड जस्ता घर बासको प्रमाण 
 ५. बसाइ सरेर आउनेहरुको लागि बसाइ सरी आएको जिल्लाबाट बाबु आमा वा सनाखत गर्ने व्यक्तिको नागरिकताको अभिलेख माग गरी सो को भिडेको अभिलेख प्राप्त हुनु पर्नेछ ।\n ''',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -105,11 +107,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'स.प्र.जि.अ./ प्रशासकीय / अधिकृत / ना.सु.\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -120,12 +118,9 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: 'स.प्र.जि.अ.को हकमा प्र.जि.अ. र अन्य कर्मचारीको हकमा स.प्र.जि.अ.\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          text:
+                              'स.प्र.जि.अ.को हकमा प्र.जि.अ. र अन्य कर्मचारीको हकमा स.प्र.जि.अ.\n',
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -137,11 +132,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमाण पुगेकोमा सोही दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -153,11 +144,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'रु. १०/- को टिकट\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
@@ -175,18 +162,15 @@ class JiPraKaBibaran extends StatelessWidget {
               headerBackgroundColorOpened: Color.fromARGB(255, 221, 221, 221),
               rightIcon: Icon(Icons.keyboard_arrow_down,
                   color: Colors.black, size: 20),
-              header: Text('बैवाहिक अंगीकृत नागरिकता (महिलाका लागि)', style: _headerStyle),
+              header: Text('बैवाहिक अंगीकृत नागरिकता (महिलाका लागि)',
+                  style: _headerStyle),
               content: Container(
                 padding: const EdgeInsets.all(5),
                 alignment: Alignment.topLeft,
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '''१. अनुसूची-७ को फाराममा वडा अध्यक्षको सिफारिश
@@ -196,11 +180,7 @@ class JiPraKaBibaran extends StatelessWidget {
 ५. पतिको सनाखत, पति नभएमा पतिको नाता भिडने नजिकको नातेदारको सनाखत
 ६. श्यामश्वेत फोटो २ प्रति (कर्मचारी परिवार भए ४ प्रति)
 ७. भिसा लाग्ने देशको महिला भए मान्य अवधीको भिसा ।''',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -212,11 +192,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'स. प्र. जि. अ. / प्रकाशकिय अधिकृत / ना.सु.\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -227,12 +203,9 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: 'स. प्र. जि. अ. को हकमा प्र. जि. अ. र अन्य कर्मचारीको हकमा स. प्र. जि. अ.\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          text:
+                              'स. प्र. जि. अ. को हकमा प्र. जि. अ. र अन्य कर्मचारीको हकमा स. प्र. जि. अ.\n',
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -244,11 +217,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमाण पुगेको सोही दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -260,11 +229,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'रु १०/- को टिकट\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
@@ -286,25 +251,18 @@ class JiPraKaBibaran extends StatelessWidget {
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
-                          text: '''१. जिल्लामा कार्यरत नेपाल सरकारको स्थायी कर्मचारी, सरकारी संस्थान, विश्वविद्यालयमा वा सामुदायिक विद्यालयमा कार्यरत स्थायी शिक्षकका परिवार भए सम्बन्धित निकायको सिफारिस पत्र र कर्मचारीको परिचयपत्रको फोटोकपी
+                          text:
+                              '''१. जिल्लामा कार्यरत नेपाल सरकारको स्थायी कर्मचारी, सरकारी संस्थान, विश्वविद्यालयमा वा सामुदायिक विद्यालयमा कार्यरत स्थायी शिक्षकका परिवार भए सम्बन्धित निकायको सिफारिस पत्र र कर्मचारीको परिचयपत्रको फोटोकपी
 २. अनुसूची १ - वंशज र अनुसूची ७ – वैवाहिक अंगीकृतको स्थानीय तहबाट
 सिफारिस फाराम
 ३. अटो साइजको फोटो २ प्रति (वंशज), ५ प्रति(वैवाहिक अंगीकृतका लागि)
 ४. पिता/पति वा नजिकको नातेदारको ना.प्र. सहित सनाखत
 ५. जन्ममिति खुल्ने शैक्षिक प्रमाण पत्र वा जन्मदर्ता वा नाबालक परिचय पत्र
 ६. विवाहित महिला भए विवाहदर्ता प्रमाणपत्र र पतिको नागरिकताको प्रमाणपत्र।\n''',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -316,11 +274,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'स. प्र. जि. अ. / प्रकाशकिय अधिकृत / ना.सु.\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -331,12 +285,9 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: 'स. प्र. जि. अ. को हकमा प्र. जि. अ. र अन्य कर्मचारीको हकमा स. प्र. जि. अ.\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          text:
+                              'स. प्र. जि. अ. को हकमा प्र. जि. अ. र अन्य कर्मचारीको हकमा स. प्र. जि. अ.\n',
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -348,11 +299,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमाण पुगेको सोही दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -364,18 +311,13 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'रु १०/- को टिकट\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),
               ),
               headerBorderRadius: 10,
             ),
-            
             AccordionSection(
               isOpen: false,
               contentBorderColor: Colors.white,
@@ -383,19 +325,14 @@ class JiPraKaBibaran extends StatelessWidget {
               headerBackgroundColorOpened: Color.fromARGB(255, 221, 221, 221),
               rightIcon: Icon(Icons.keyboard_arrow_down,
                   color: Colors.black, size: 20),
-              header: Text('वंशजको नागरिकता प्रतिलिपी',
-                  style: _headerStyle),
+              header: Text('वंशजको नागरिकता प्रतिलिपी', style: _headerStyle),
               content: Container(
                 padding: const EdgeInsets.all(5),
                 alignment: Alignment.topLeft,
                 child: RichText(
                   text: const TextSpan(
                       text: 'आवश्यक कागजातहरु \n',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 38, 38, 38),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: _contentHeadingStyle,
                       children: [
                         TextSpan(
                           text: '\nकाठमाडौं जिल्लाको हकमा : ',
@@ -406,7 +343,8 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '''\n१. अनुसूची फाराम सम्बन्धित स्थानीय तहबाट सिफारिस र फोटो ३ प्रति 
+                          text:
+                              '''\n१. अनुसूची फाराम सम्बन्धित स्थानीय तहबाट सिफारिस र फोटो ३ प्रति 
 २. नागिरकता प्रमाणपत्र नम्बर एवम् जारी मिति खुलेको प्रमाण र सो को प्रतिलिपी ।\n''',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
@@ -415,7 +353,8 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '\nअन्य जिल्लाबाट जारी भएको नागरिकताको प्रतिलिपी लिन परेमा : \n',
+                          text:
+                              '\nअन्य जिल्लाबाट जारी भएको नागरिकताको प्रतिलिपी लिन परेमा : \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -423,14 +362,11 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text:'''१. बसाइसराई दर्ता प्रमाण पत्र सक्कल तथा प्रतिलिपी 
+                          text:
+                              '''१. बसाइसराई दर्ता प्रमाण पत्र सक्कल तथा प्रतिलिपी 
 २. घर जग्गा स्थायी बसोवास लालपुर्जा सक्कल तथा प्रतिलिपी 
 ३. जारी भएको जिल्लाको अभिलेख भिडेको प्रमाण ।\n ''',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nकर्मचारी परिवारको हकमा : ',
@@ -459,14 +395,11 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text:'''१. पतिको सक्कल नागिरकताको प्रमाणपत्र र सनाखतको लागि उपस्थिति 
+                          text:
+                              '''१. पतिको सक्कल नागिरकताको प्रमाणपत्र र सनाखतको लागि उपस्थिति 
 २. विवाह दर्ता सक्कल तथा प्रतिलिपी 
 ३. अन्य जिल्लाबाट नागरिकता प्रमाणपत्र जारी भएको भए सम्बन्धित जिल्लाबाट अभिलेख भिडेको प्रमाण ।\n ''',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nजिम्मेवार अधिकारी \n',
@@ -478,11 +411,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'स.प्र.जि.अ./ प्रशासकीय / अधिकृत / ना.सु.\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nगुनसो सुन्ने अधिकारी \n',
@@ -493,12 +422,9 @@ class JiPraKaBibaran extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: 'स.प्र.जि.अ.को हकमा प्र.जि.अ. र अन्य कर्मचारीको हकमा स.प्र.जि.अ.\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          text:
+                              'स.प्र.जि.अ.को हकमा प्र.जि.अ. र अन्य कर्मचारीको हकमा स.प्र.जि.अ.\n',
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा समय \n',
@@ -510,11 +436,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'प्रमाण पुगेकोमा सोही दिन\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                         TextSpan(
                           text: '\nसेवा शुल्क \n',
@@ -526,11 +448,7 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'रु. १३/- को टिकट\n',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 97, 97, 97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          style: _contentStyle,
                         ),
                       ]),
                 ),

@@ -3,8 +3,27 @@ import 'package:anticorruptionapp/Screens/JiPraKa_Screen.dart';
 import 'package:anticorruptionapp/Screens/NagarpalikaOda_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 double? width;
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      // Remove the debug banner
+      debugShowCheckedModeBanner: false,
+      title: 'Anti Corruption Nepal',
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
+      home: const HomePage(),
+      // Theme mode depends on device settings at the beginning
+    );
+  }
+}
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,6 +41,15 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Anti Corruption Nepal'),
         backgroundColor: Colors.green,
+        actions: [
+          IconButton(
+              icon: const Icon(Icons.lightbulb),
+              onPressed: () {
+                Get.isDarkMode
+                    ? Get.changeTheme(ThemeData.light())
+                    : Get.changeTheme(ThemeData.dark());
+              })
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(children: [
