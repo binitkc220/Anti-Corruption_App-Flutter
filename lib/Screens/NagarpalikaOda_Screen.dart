@@ -76,7 +76,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -145,7 +145,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -223,7 +223,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -297,7 +297,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -371,7 +371,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -445,7 +445,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                             ),
                           ),
                           TextSpan(
-                            text: '\nगुनसो सुन्ने अधिकारी \n',
+                            text: '\nगुनासो सुन्ने अधिकारी \n',
                             style: TextStyle(
                               color: Color.fromARGB(255, 38, 38, 38),
                               fontSize: 16,
@@ -551,7 +551,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -626,7 +626,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -706,7 +706,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,

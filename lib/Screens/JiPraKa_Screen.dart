@@ -107,7 +107,7 @@ class JiPraKaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -192,7 +192,7 @@ class JiPraKaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -274,7 +274,7 @@ class JiPraKaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -411,7 +411,7 @@ class JiPraKaBibaran extends StatelessWidget {
                           style: _contentStyle,
                         ),
                         TextSpan(
-                          text: '\nगुनसो सुन्ने अधिकारी \n',
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
                           style: TextStyle(
                             color: Color.fromARGB(255, 38, 38, 38),
                             fontSize: 16,
@@ -445,6 +445,159 @@ class JiPraKaBibaran extends StatelessWidget {
                         ),
                         TextSpan(
                           text: 'रु. १३/- को टिकट\n',
+                          style: _contentStyle,
+                        ),
+                      ]),
+                ),
+              ),
+              headerBorderRadius: 10,
+            ),
+            AccordionSection(
+              isOpen: false,
+              contentBorderColor: Colors.white,
+              headerBackgroundColor: Colors.white,
+              headerBackgroundColorOpened: Color.fromARGB(255, 221, 221, 221),
+              rightIcon: Icon(Icons.keyboard_arrow_down,
+                  color: Colors.black, size: 20),
+              header: Text('साधारण राहदानी', style: _headerStyle),
+              content: Container(
+                padding: const EdgeInsets.all(5),
+                alignment: Alignment.topLeft,
+                child: RichText(
+                  text: const TextSpan(
+                      text: 'आवश्यक कागजातहरु \n',
+                      style: _contentHeadingStyle,
+                      children: [
+                        TextSpan(
+                          text: '\nनिवेदकको नागरिकता प्रमाणपत्र जिल्ला प्रशासन कार्यालय काठमाडौंबाट जारी भएको हकमा : ',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text:
+                              '''\n१. रीतपूर्वक भरिएको दरखास्त फाराम २ प्रति 
+२. नेपाली नागरिकताको प्रमाणपत्रको सक्कल प्रति र सो को १ प्रति प्रतिलिपि (ना.प्र.शाखाबाट ना.प्र.प्रमाणपत्र भिडेको हुनु पर्नेछ) 
+३. हालसालै खिचेको निर्धारित ढाँचाको (MRP) फोटो ३ प्रति 
+४. नाबालकको हकमा जिल्ला प्रशासन कार्यालय काठमाडौंबाट जारी गरिएको नाबालक परिचय पत्र र निजको बाबु वा आमा मध्ये कुनै एक जनाको नागरिकताको प्रमाण पत्र र सो को प्रतिलिपि । संरक्षक नियुक्त भएकोमा संरक्षक भएको व्यहोरा खुल्ने लिखतको सक्कल प्रति र संरक्षकको नागरिकताको प्रमाणपत्र तथा त्यसको प्रतिलिपि 
+५. पहिले राहदानी लिएको भए सो को सक्कल प्रति र प्रतिलिपि 
+६. राहदानी दस्तुर रु. ५,०००।-तिरेको रसिद र १० वर्ष मुनिको नाबालकको हकमा रु. २,५००।(राहदानी हराएको/च्यातिएको वा कुनै किसिमले विग्रेको भएमा दोब्बर दस्तुर लाग्नेछ।) 
+७. निवेदक स्वयं उपस्थित हुनुपर्ने ।\n''',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 15,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        TextSpan(
+                          text:
+                              '\nअन्य जिल्लाबाट नागरिकता लिएर बसाइसराईं गरी काठमाण्डौ जिल्लामा आउनेको हकमा : \n',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text:
+                              '''१. रीतपूर्वक भरिएको दरखास्त फाराम २ प्रति 
+२. नेपाली नागरिकता प्रमाणपत्रको सक्कल प्रति र सो को १ प्रति प्रतिलिपी 
+३. हालसालै खिचेको निर्धारित ढाँचाको (MRP )फोटो ३ प्रति 
+४. स्थानीय पञ्जिकाधिकारीको कार्यालयबाट जारी भएको बसाइसराई दर्ता प्रमाणपत्र 
+५. जग्गाधनी प्रमाण पत्र 
+६. सम्बन्धित जिल्लाबाट नागरिकताको अभिलेख बुझिनेछ 
+७. अन्य जिल्लाबाट नाबालक परिचयपत्र बनिसकेको हकमा सम्बन्धित जिल्लाबाट अभिलेख बुझिनेछ ।\n ''',
+                          style: _contentStyle,
+                        ),
+                        TextSpan(
+                          text: '\nअन्य जिल्लाबाट नागरिकता लिएर विवाह गरी काठमाण्डौ जिल्लामा आउनेको हकमा : ',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: '''\n१. रीतपूर्वक भरिएको दरखास्त फाराम २ प्रति 
+२. नेपाली नागरिकता प्रमाणपत्रको सक्कल प्रति र सो को १ प्रति प्रतिलिपी 
+३. हालसालै खिचेको निर्धारित ढाँचाको (MRP )फोटो ३ प्रति 
+४. विवाह दर्ता प्रमाणपत्र
+५. पतिको नागरिकता प्रमाणपत्रको प्रतिलिपि 
+६. सम्बन्धित जिल्लाबाट नागरिकताको अभिलेख बुझिनेछ ।\n''',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 15,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        TextSpan(
+                          text: '\nकाठमाण्डौ जिल्लास्थित सरकारी निकायमा कार्यरत कर्मचारी र कर्मचारी परिवारको हकमा : \n',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text:
+                              '''१. रीतपूर्वक भरिएको दरखास्त फाराम २ प्रति 
+२. नेपाली नागरिकता प्रमाणपत्रको सक्कल प्रति र सो को १ प्रति प्रतिलिपी 
+३. हालसालै खिचेको निर्धारित ढाँचाको (MRP )फोटो ३ प्रति 
+४. सम्बन्धित निकायको सिफारिस पत्र 
+५. सम्बन्धित जिल्लाबाट नागरिकताको अभिलेख बुझिनेछ
+६. अन्य जिल्लाबाट नाबालक परिचयपत्र बनिसकेको हकमा सम्बन्धित जिल्लाबाट अभिलेख बुझिनेछ 
+७. कर्मचारीको परिचयपत्रको प्रतिलिपी १ प्रति ।\n ''',
+                          style: _contentStyle,
+                        ),
+                        TextSpan(
+                          text: '\nजिम्मेवार अधिकारी \n',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'स.प्र.जि.अ./ प्रशासकीय / अधिकृत / ना.सु.\n',
+                          style: _contentStyle,
+                        ),
+                        TextSpan(
+                          text: '\nगुनासो सुन्ने अधिकारी \n',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text:
+                              'स.प्र.जि.अ.को हकमा प्र.जि.अ. र अन्य कर्मचारीको हकमा स.प्र.जि.अ.\n',
+                          style: _contentStyle,
+                        ),
+                        TextSpan(
+                          text: '\nसेवा समय \n',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'निवेदन पेश गरेको २५ दिन पछि\n',
+                          style: _contentStyle,
+                        ),
+                        TextSpan(
+                          text: '\nसेवा शुल्क \n',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 38, 38, 38),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'रु ५,०००/- \n',
                           style: _contentStyle,
                         ),
                       ]),

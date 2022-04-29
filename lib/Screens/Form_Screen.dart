@@ -27,6 +27,7 @@ class DataFormState extends State<DataForm> {
   bool filestatus_ = true;
 
   late TextEditingController _valueNameController,
+      _valuephoneController,
       _valueghusdineNameController,
       _valueghuslineNameController,
       _valueghuslinePostController,
@@ -45,6 +46,7 @@ class DataFormState extends State<DataForm> {
   @override
   void initState() {
     _valueNameController = TextEditingController();
+    _valuephoneController = TextEditingController();
     _valueghusdineNameController = TextEditingController();
     _valueghuslineNameController = TextEditingController();
     _valueghuslinePostController = TextEditingController();
@@ -112,6 +114,7 @@ class DataFormState extends State<DataForm> {
     try {
       var response = await http.post(Uri.parse(serverURL), body: {
         "name": _valueNameController.text,
+        "phone": _valuephoneController.text,
         "ghus_dine": _valueghusdineNameController.text,
         "ghus_line": _valueghuslineNameController.text,
         "post": _valueghuslinePostController.text,
@@ -136,6 +139,7 @@ class DataFormState extends State<DataForm> {
           });
         } else {
           _valueNameController.clear();
+          _valuephoneController.clear();
           _valueghusdineNameController.clear();
           _valueghuslineNameController.clear();
           _valueghuslinePostController.clear();
@@ -188,6 +192,20 @@ class DataFormState extends State<DataForm> {
             labelText: 'घुस दिने व्यक्तिको नाम (घुस दिन खोजिएको हो भने)',
             labelStyle: TextStyle(fontSize: 18)),
         keyboardType: TextInputType.name,
+        style: TextStyle(fontSize: 18),
+      ),
+    );
+  }
+
+  Widget _buildphoneField() {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+      child: TextField(
+        controller: _valuephoneController,
+        decoration: const InputDecoration(
+            labelText: 'हजुरको सम्पर्क नम्बर*',
+            labelStyle: TextStyle(fontSize: 18)),
+        keyboardType: TextInputType.number,
         style: TextStyle(fontSize: 18),
       ),
     );
@@ -335,6 +353,7 @@ class DataFormState extends State<DataForm> {
               ),
             ),
             _buildNameTextField(),
+            _buildphoneField(),
             _buildghusdineNameField(),
             _buildghuslineNameField(),
             _buildghuslinePostField(),
