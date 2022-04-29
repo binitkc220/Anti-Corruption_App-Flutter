@@ -28,12 +28,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
       fontWeight: FontWeight.bold,
     );
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Nagarpalika Oda Bibaran',
-      darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.system,
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Color.fromARGB(255, 197, 195, 195),
         appBar: AppBar(
           title: const Text('नगरपलिका / वडा सम्बन्धि कामहरुको विवरण'),
@@ -754,7 +749,7 @@ class NagarpalikaOdaBibaran extends StatelessWidget {
             ),
           ],
         ),
-      ),
+  
     );
   }
 }

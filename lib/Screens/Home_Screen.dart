@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -33,172 +32,80 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List textList = [
+    'नगरपलिका / वडा सम्बन्धि कामहरुको विवरण',
+    'जिल्ला प्रशासन कार्यालय सम्बन्धि कामहरुको विवरण',
+    'घरेलु सम्बन्धि कामहरुको विवरण',
+    'जिल्ला शिक्षा कार्यालय सम्बन्धि कामहरुको विवरण',
+    'घुस उजुरी फारम'
+  ];
+  List navigateOptionList = [
+    NagarpalikaOdaBibaran(),
+    JiPraKaBibaran(),
+    Text('Coming soon'),
+    Text('comsdf'),
+    DataForm()
+  ];
   @override
   Widget build(BuildContext context) {
     width = MediaQuery.of(context).size.width;
     return Scaffold(
-      drawer: NavDrawer(),
-      appBar: AppBar(
-        title: Text('Anti Corruption Nepal'),
-        backgroundColor: Colors.green,
-        actions: [
-          IconButton(
-              icon: const Icon(Icons.lightbulb),
-              onPressed: () {
-                Get.isDarkMode
-                    ? Get.changeTheme(ThemeData.light())
-                    : Get.changeTheme(ThemeData.dark());
-              })
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(children: [
-          option1(context),
-          option2(context),
-          option3(),
-          option4(),
-          form(context),
-        ]),
-      ),
-    );
+        drawer: NavDrawer(),
+        appBar: AppBar(
+          title: Text('Anti Corruption Nepal'),
+          backgroundColor: Colors.green,
+          actions: [
+            IconButton(
+                icon: const Icon(Icons.lightbulb),
+                onPressed: () {
+                  Get.isDarkMode
+                      ? Get.changeTheme(ThemeData.light())
+                      : Get.changeTheme(ThemeData.dark());
+                })
+          ],
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Image(image: AssetImage('assets/images/political_map_of_nepal.png')),
+              ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                  itemCount: textList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return optionCard(
+                        context, textList[index], navigateOptionList[index]);
+                  }),
+            ],
+          ),
+        ));
   }
 }
 
-Widget option1(context) {
+Widget optionCard(BuildContext context, String text, Widget navigateTo) {
   return Container(
-    padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
-    child: SizedBox(
-      width: width,
-      height: 60.0,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          primary: Colors.black,
-          onPrimary: Colors.amber,
-          shadowColor: Colors.grey,
-          elevation: 20,
-        ),
-        onPressed: () {
-          Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const NagarpalikaOdaBibaran()),
-  );
-        },
-        child: const Text("नगरपलिका / वडा सम्बन्धि कामहरुको विवरण",
-            style: TextStyle(
-              fontSize: 20,
-            ),
-            textAlign: TextAlign.center,
-            ),
-      ),
-    ),
-  );
-}
-
-Widget option2(context) {
-  return Container(
-    padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
-    child: SizedBox(
-      width: width,
-      height: 60.0,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          primary: Color.fromARGB(255, 39, 97, 41),
-          onPrimary: Colors.amber,
-          shadowColor: Colors.grey,
-          elevation: 20,
-        ),
-        onPressed: () {
-          Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const JiPraKaBibaran()),
-  );
-        },
-        child: const Text(
-          "जिल्ला प्रशासन कार्यालय सम्बन्धि कामहरुको विवरण",
-          style: TextStyle(
+    padding: EdgeInsets.all(12),
+    height: 100,
+    child: ElevatedButton(
+        child: Text(
+          text,
+          style: const TextStyle(
             fontSize: 20,
           ),
           textAlign: TextAlign.center,
         ),
-      ),
-    ),
-  );
-}
-
-Widget option3() {
-  return Container(
-    padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
-    child: SizedBox(
-      width: width,
-      height: 60.0,
-      child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: Color.fromARGB(255, 171, 41, 31),
-          onPrimary: Colors.amber,
-          shadowColor: Colors.grey,
-          elevation: 20,
-        ),
-        onPressed: () {},
-        child: const Text("घरेलु सम्बन्धि कामहरुको विवरण",
-            style: TextStyle(
-              fontSize: 20,
-            )),
-      ),
-    ),
-  );
-}
-
-Widget option4() {
-  return Container(
-    padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
-    child: SizedBox(
-      width: width,
-      height: 60.0,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          primary: Color.fromARGB(255, 23, 107, 176),
-          onPrimary: Colors.amber,
-          shadowColor: Colors.grey,
-          elevation: 20,
-        ),
-        onPressed: () {},
-        child: const Text(
-          "जिल्ला शिक्षा कार्यालय सम्बन्धि कामहरुको विवरण",
-          style: TextStyle(
-            fontSize: 20,
-          ),
-          textAlign: TextAlign.center,
-        ),
-      ),
-    ),
-  );
-}
-
-Widget form(context) {
-  return Container(
-    padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
-    child: SizedBox(
-      width: width,
-      height: 60.0,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          primary: Colors.black,
-          onPrimary: Colors.amber,
+          primary: Color.fromARGB(255, 125, 125, 125),
+          onPrimary: Color.fromARGB(255, 241, 244, 245),
           shadowColor: Colors.grey,
           elevation: 20,
         ),
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const DataStoreForm()),
+            MaterialPageRoute(builder: (context) => navigateTo),
           );
-        },
-        child: const Text("घुस उजुरी फारम",
-            style: TextStyle(
-              fontSize: 20,
-            )),
-      ),
-    ),
+        }),
   );
 }
 

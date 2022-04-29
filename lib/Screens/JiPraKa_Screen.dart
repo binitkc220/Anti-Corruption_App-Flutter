@@ -28,10 +28,7 @@ class JiPraKaBibaran extends StatelessWidget {
       fontWeight: FontWeight.bold,
     );
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Jilla Prasasan Karyalaya Bibaran',
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Color.fromARGB(255, 197, 195, 195),
         appBar: AppBar(
           title: const Text('जिल्ला प्रशासन कार्यालय सम्बन्धि कामहरुको विवरण'),
@@ -457,7 +454,6 @@ class JiPraKaBibaran extends StatelessWidget {
             ),
           ],
         ),
-      ),
     );
   }
 }

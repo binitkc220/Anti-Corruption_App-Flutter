@@ -10,11 +10,7 @@ class DataStoreForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.system,
-      home: DataForm());
+    return DataForm();
   }
 }
 
@@ -41,6 +37,8 @@ class DataFormState extends State<DataForm> {
   String? districtdropdownValue;
   late bool status_;
   late String message;
+  late String target_file;
+  String final_target_file="";
   String serverURL =
       "https://binitkc-flutter-database.000webhostapp.com/go.php";
 
@@ -62,7 +60,7 @@ class DataFormState extends State<DataForm> {
 
   Future _uploadFiles() async {
     try {
-      if (_valueghusdineNameController.text.isEmpty)
+      if (_valueghuslineNameController.text.isEmpty || _valueghuslinePostController.text.isEmpty)
       {
         setState(() {
         fileresponsemssg = " घुस लिने कर्मचारीको नाम र पद लेखिदिनुहोला";
@@ -96,12 +94,17 @@ class DataFormState extends State<DataForm> {
           data: formData);
       print("File upload response: $response3");
       setState(() {
-        fileresponsemssg = response3.data["message"];
         filestatus_ = true;
+        fileresponsemssg = response3.data["message"];
+        target_file = response3.data["targetfile"];
       });
-      print(fileresponsemssg);}
+      print(fileresponsemssg);
+      final_target_file = final_target_file + target_file + ",";
+      print("Target file from php is $final_target_file");
+      }     
     } catch (e) {
       print("Exception caught : $e");
+      
     }
   }
 
@@ -117,6 +120,7 @@ class DataFormState extends State<DataForm> {
         "district": districtdropdownValue,
         "palika": _valuepalikaNameController.text,
         "bistrit_bibaran": _valuebistritbibaranController.text,
+        "target_file": final_target_file.toString(),
       });
       print('Response status: ${response.statusCode}');
       print('Response body: ${response.body}');
@@ -139,6 +143,7 @@ class DataFormState extends State<DataForm> {
           _valuebivagNameController.clear();
           _valuepalikaNameController.clear();
           _valuebistritbibaranController.clear();
+          final_target_file = "";
           setState(() {
             status_ = true;
             message = responseMessage;
