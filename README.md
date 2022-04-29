@@ -1,6 +1,8 @@
 # Anti Corruption Nepal App
 
-A Flutter project.
+A Flutter project on Anti Corruption Nepal app project for Codefest 2022 hackathon.
+
+This project addresses the 16th SDG, 'Peace Justice and Strong Institutions'
 
 ## Getting Started
 
